@@ -413,7 +413,7 @@ RUN --mount=type=cache,target=/root/.cache/uv bash - <<'BASH'
         TORCH_CUDA_ARCH_LIST="${FI_TORCH_CUDA_ARCH_LIST}" \
             uv pip install --system --no-build-isolation --force-reinstall --no-deps .
     popd
-    rm -rf flashinfer
+    # rm -rf flashinfer
 BASH
 COPY examples examples
 COPY benchmarks benchmarks
