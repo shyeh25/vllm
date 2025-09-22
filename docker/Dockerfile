@@ -383,7 +383,7 @@ RUN --mount=type=bind,from=build,src=/workspace/dist,target=/vllm-workspace/dist
 ARG FLASHINFER_GIT_REPO="https://github.com/shyeh25/flashinfer.git"
 # Keep this in sync with "flashinfer" extra in setup.py
 # ARG FLASHINFER_GIT_REF="v0.3.1"
-ARG FLASHINFER_GIT_REF="0919_05a882a7ae"
+ARG FLASHINFER_GIT_REF="main"
 # Flag to control whether to compile FlashInfer AOT kernels
 # Set to "true" to enable AOT compilation:
 # docker build --build-arg FLASHINFER_AOT_COMPILE=true ...
