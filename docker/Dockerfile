@@ -375,9 +375,11 @@ RUN --mount=type=bind,from=build,src=/workspace/dist,target=/vllm-workspace/dist
 # $ # upload the wheel to a public location, e.g. https://wheels.vllm.ai/flashinfer/v0.2.6.post1/flashinfer_python-0.2.6.post1-cp39-abi3-linux_x86_64.whl
 
 # Install FlashInfer from source
-ARG FLASHINFER_GIT_REPO="https://github.com/flashinfer-ai/flashinfer.git"
+#ARG FLASHINFER_GIT_REPO="https://github.com/flashinfer-ai/flashinfer.git"
+ARG FLASHINFER_GIT_REPO="https://github.com/weireweire/flashinfer.git"
 # Keep this in sync with "flashinfer" extra in setup.py
-ARG FLASHINFER_GIT_REF="v0.3.0"
+#ARG FLASHINFER_GIT_REF="v0.3.0"
+ARG FLASHINFER_GIT_REF="0.3.0_with_autotune_print"
 # Flag to control whether to compile FlashInfer AOT kernels
 # Set to "true" to enable AOT compilation:
 # docker build --build-arg FLASHINFER_AOT_COMPILE=true ...
